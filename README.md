@@ -18,7 +18,9 @@ A fully responsive, single-file HTML/CSS/JS website for RT Briscoe Nigeria Plc, 
 
 ## 🖼️ Preview
 
-> *Open `index.html` in any modern browser. Switch color variants by replacing the CSS section.*
+> *Open `rtbriscoe_redesign_homepage -1.html` in any modern browser for the *Premium* color variant.
+> AND
+> *Open `RTBriscoe redesign original palette.html` in any modern browser for the *original* brand colors.
 
 ## 🛠️ Tech Stack
 
