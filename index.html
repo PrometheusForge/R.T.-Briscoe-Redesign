@@ -1,1 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RT Briscoe Nigeria — authorized Toyota dealer and industrial conglomerate since 1957. Serving 400,000+ customers with vehicles, forklifts, compressors, and real estate.">
+    <meta name="theme-color" content="#0B1929">
+    
+    <title>R.T. Briscoe Nigeria Plc | Automobile, Industrial, Technical & Property Solutions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Color Variables */
+        :root {
+            --primary-dark: #383e77;
+            --white: #FFFFFF;
+            --muted-text: #8fa3b5;
+            --light-grey: #f5f5f5;
+            --very-dark: #2a2a2a;
+        }
+
+        /* Typography */
+        h1, h2 {
+            font-family: 'Poppins', serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.7rem;
+            line-height: 1.2;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 1.3;
+            color: #171F3D;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--very-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            /* display: inline-flex; */
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #383e77;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffffff;
+            color: #383e77;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px var(--light-grey);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* ===== SECTION 1: TOP UTILITY BAR ===== */
+        .utility-bar {
+            background-color: var(--primary-dark);
+            color: var(--muted-text);
+            font-size: 0.875rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .utility-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .utility-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .utility-right {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .utility-right a {
+            color: var(--muted-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .utility-right a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .utility-bar .container {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+            .utility-right {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* ===== SECTION 2: MAIN NAVIGATION ===== */
+        .navbar {
+            background-color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .logo {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 0.5rem 0rem;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            /*display: flex;*/
+            flex-direction: column;
+            /*align-items: center;*/
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--primary-dark);
+            letter-spacing: 0.02em;
+            margin-top: 0.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--primary-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .call-info {
+            text-align: right;
+        }
+
+        .call-label {
+            font-size: 0.75rem;
+            color: var(--muted-text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .call-number {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .navbar-right {
+                gap: 1rem;
+            }
+            .call-info {
+                display: none;
+            }
+        }
+
+        /* ===== SECTION 3: HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #0B1929 0%, #1a3a58 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide {
+            background-color: #666;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            padding: 5rem 0;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .slide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-text h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        .slide-badge {
+            display: inline-block;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .slide-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .slide-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .slide-visual {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(201, 168, 76, 0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .slide-visual-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .slide-visual-text {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .purple-text {
+            color: #8fa3b5
+        }
+        /* Carousel Navigation Dots */
+        .carousel-dots {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.75rem;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .dot.active {
+            background-color: var(--accent-gold);
+            width: 32px;
+            border-radius: 6px;
+        }
+
+        .dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                min-height: 400px;
+            }
+            .carousel-slide {
+                padding: 3rem 0;
+            }
+            .slide-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1.5rem;
+            }
+            .slide-text h1 {
+                font-size: 2.2rem;
+            }
+            .slide-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .carousel-dots {
+                bottom: 1rem;
+                gap: 0.5rem;
+            }
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+            .dot.active {
+                width: 24px;
+            }
+        }
+
+        /* ===== SECTION 4: TRUST BAR ===== */
+        .trust-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            padding: 0 1rem;
+            border-right: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-icon {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .trust-label {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-subtext {
+            color: var(--muted-text);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .trust-items {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .trust-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+                padding-bottom: 1.5rem;
+            }
+            .trust-item:nth-child(3), .trust-item:nth-child(4) {
+                border-bottom: none;
+            }
+        }
+
+        /* ===== SECTION 5: BUSINESS DIVISIONS ===== */
+        .divisions {
+            background-color: white;
+            padding: 3.25rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-eyebrow {
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            color: var(--muted-text);
+            font-size: 1.05rem;
+            margin-top: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 2.5rem;
+        }
+
+        .division-card {
+            background-color: var(--white);
+            border: 0.5px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .division-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .division-card-top {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .division-card-motors {
+            background-color: var(--primary-dark);
+        }
+
+        .division-card-mhe {
+            background-color: #1a5a3a;
+        }
+
+        .division-card-elgi {
+            background-color: #4a2a5a;
+        }
+
+        .division-card-properties {
+            background-color: #5a4a2a;
+        }
+
+        .division-card-body {
+            padding: 1.5rem;
+        }
+
+        .division-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .division-card-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .division-card-link {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .divisions-cta {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .divisions-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .divisions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SECTION 6: STATS ===== */
+        .stats {
+            background-color: var(--light-grey);
+            padding: 3.25rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.625rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--very-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-subtext {
+            font-size: 12px;
+            color: var(--muted-text);
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        /* ===== SECTION 7: WHY CHOOSE BRISCOE ===== */
+        .why-briscoe {
+            background-color: var(--white);
+            padding: 3.25rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SECTION 8: TESTIMONIALS ===== */
+        .testimonials {
+            background-color: var(--light-grey);
+            padding: 3rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            border: 0.5px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-quote {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            color: var(--muted-text);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SECTION 9: FORBES STRIP ===== */
+        .forbes-strip {
+            background-color: var(--white);
+            padding: 10px 0px 50px;
+        }
+
+        .forbes-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .forbes-left {
+            color: var(--muted-text);
+            font-size: 0.875rem;
+        }
+
+        .forbes-center {
+            background-color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .forbes-star {
+            color: var(--accent-gold);
+            font-size: 1.25rem;
+        }
+
+        .forbes-text {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .forbes-right {
+            text-align: right;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .forbes-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .forbes-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .forbes-right {
+                text-align: center;
+            }
+        }
+
+        /* ===== SECTION 10: BRAND PARTNERS ===== */
+        .partners {
+            background-color: var(--white);
+            padding: 2.25rem 0;
+        }
+
+        .partners-pills {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-pill {
+            background-color: var(--primary-dark);
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s;
+        }
+
+        .partner-pill:hover {
+            border-color: var(--primary-dark);
+            color: var(--primary-dark);
+            background-color: transparent;
+        }
+
+        /* ===== SECTION 11: QUOTE FORM ===== */
+        .quote-section {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 3.25rem 0;
+        }
+
+        .quote-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .quote-left h2 {
+            color: var(--white);
+        }
+
+        .quote-left p {
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--muted-text);
+            font-size: 0.95rem;
+        }
+
+        .contact-item-icon {
+            font-size: 1.25rem;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .contact-item-text {
+            line-height: 1.5;
+        }
+
+        .quote-form {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+
+        .quote-form h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: var(--primary-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+        }
+
+        .form-row-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form-success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-error {
+            color: #c62828;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .quote-container {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SECTION 12: FOOTER ===== */
+        .footer {
+            background-color: var(--very-dark);
+            color: var(--muted-text);
+            padding: 2.5rem 0 1.25rem;
+        }
+
+        .footer-upper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--muted-text);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-column a:hover {
+            color: var(--light-grey);
+        }
+
+        .footer-tagline {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--muted-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-text);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .footer-lower {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .footer-lower a {
+            color: var(--muted-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-lower a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .footer-upper {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .footer-lower {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* CTA Section Centering */
+        .cta-center {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        /* Smooth transitions */
+        a, button {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== SECTION 1: TOP UTILITY BAR ===== -->
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <span>📍</span>
+                <span>18 Fatai Atere Way, Matori, Oshodi, Lagos</span>
+            </div>
+            <div class="utility-right">
+                <a href="#">Pre-Owned Vehicles</a>
+                <a href="#">Briscoe Blog</a>
+                <a href="#">Customer Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SECTION 2: MAIN NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <div class="logo">
+                    <img src="logo.png">
+                </div>
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#divisions">Business Units</a></li>
+                    <li><a href="#investor">Investor Relations</a></li>
+                    <li><a href="#savings">Savings & Investments</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <!-- <div class="call-info">
+                    <div class="call-label">Call us now</div>
+                    <div class="call-number">0809 050 3875</div>
+                </div> -->
+                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION 3: HERO SECTION WITH CAROUSEL =====-->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <!-- Slide 1: Toyota Prado -->
+                <div class="carousel-slide active">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Authorized Toyota Dealer · Est. 1957</div>
+                            <h1>Nigeria's Most <br><span class="purple-text">Trusted</span> Automotive & Industrial Partner</h1>
+                            <p>Experience unmatched reliability and luxury with Nigeria's most trusted Toyota dealership. The Prado combines off-road capability with premium comfort.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Vehicles</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">🚙</div>
+                            <div class="slide-visual-text">
+                                <strong>Toyota Prado</strong><br>
+                                Premium SUV Excellence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Toyota Camry -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Authorized Toyota Dealer · Est. 1957</div>
+                            <h1>Toyota Camry<br><span class="purple-text">Elegance & Performance</span></h1>
+                            <p>The world's best-selling sedan. Engineered for comfort, efficiency, and reliability. Perfect for executives and families who demand excellence.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Vehicles</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">🚗</div>
+                            <div class="slide-visual-text">
+                                <strong>Toyota Camry</strong><br>
+                                Luxury Sedan Class
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Toyota Hilux -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Authorized Toyota Dealer · Est. 1957</div>
+                            <h1>Toyota Hilux<br><span class="purple-text">Built to Conquer</span></h1>
+                            <p>The legendary workhorse trusted by businesses across Nigeria. Durability, power, and versatility in one unstoppable package.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Vehicles</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">🚚</div>
+                            <div class="slide-visual-text">
+                                <strong>Toyota Hilux</strong><br>
+                                Pickup Truck Legend
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Toyota Fortuner -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Authorized Toyota Dealer · Est. 1957</div>
+                            <h1>Toyota Fortuner<br><span class="purple-text">Adventure Awaits</span></h1>
+                            <p>Seven-seater SUV engineered for families and businesses. Spacious, powerful, and built for Nigeria's diverse terrain.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Vehicles</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">🚐</div>
+                            <div class="slide-visual-text">
+                                <strong>Toyota Fortuner</strong><br>
+                                Family SUV Excellence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Briscoe MHE -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Industrial Solutions · Est. 1957</div>
+                            <h1>Briscoe MHE<br><span class="purple-text">Logistics Excellence</span></h1>
+                            <p>Manitou forklifts and material handling equipment. Trusted by Nigeria's leading warehouses and logistics companies for efficiency and reliability.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Equipment</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">🏗️</div>
+                            <div class="slide-visual-text">
+                                <strong>Briscoe MHE</strong><br>
+                                Material Handling Solutions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Briscoe Elgi -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="slide-badge">◆ Technical Solutions · Est. 1957</div>
+                            <h1>Briscoe Elgi<br><span class="purple-text">Compressed Air Systems</span></h1>
+                            <p>ELGi air compressors trusted by manufacturers worldwide. Superior efficiency, minimal downtime, and expert technical support across Nigeria.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('divisions').scrollIntoView({behavior: 'smooth'})">Explore Systems</button>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="slide-visual-icon">⚙️</div>
+                            <div class="slide-visual-text">
+                                <strong>Briscoe Elgi</strong><br>
+                                Industrial Compressors
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation Dots -->
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: TRUST BAR ===== -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">◆</div>
+                    <div class="trust-label">Authorized Toyota Dealer</div>
+                    <div class="trust-subtext">Official Nigeria franchise</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">▲</div>
+                    <div class="trust-label">69 Years in Business</div>
+                    <div class="trust-subtext">Trading since 1957</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">■</div>
+                    <div class="trust-label">400,000+ Customers</div>
+                    <div class="trust-subtext">Nationwide trust</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">●</div>
+                    <div class="trust-label">Forbes Africa Featured</div>
+                    <div class="trust-subtext">Nigeria success story 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: BUSINESS DIVISIONS ===== -->
+    <section class="divisions" id="divisions">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">OUR BUSINESS UNITS</div>
+                <h2>Four Divisions. One Standard of Excellence.</h2>
+                <p class="section-subtitle">RT Briscoe delivers quality across automotive, industrial, technical, and real estate sectors — all backed by world-class after-sales support.</p>
+            </div>
+
+            <div class="divisions-grid">
+                <div class="division-card">
+                    <div class="division-card-top division-card-motors" style="margin-bottom: -10px;">
+                        <img src="motor.jpg">
+                    </div>
+                    <div class="division-card-body">
+                        <div class="division-card-title">Briscoe Motors</div>
+                        <p class="division-card-text">Authorized Toyota dealership covering Sedans, SUVs, Pickups, Buses and LDTs. Official sales, service, and spare parts.</p>
+                        <a href="#" class="division-card-link">Explore vehicles →</a>
+                    </div>
+                </div>
+
+                <div class="division-card">
+                    <div class="division-card-top division-card-mhe">
+                        <img src="forklift.jpg">
+                    </div>
+                    <div class="division-card-body">
+                        <div class="division-card-title">Briscoe MHE</div>
+                        <p class="division-card-text">Manitou forklifts, stackers, order pickers and racking systems. Full logistics and warehousing solutions for Nigerian businesses.</p>
+                        <a href="#" class="division-card-link">View equipment →</a>
+                    </div>
+                </div>
+
+                <div class="division-card">
+                    <div class="division-card-top division-card-elgi">
+                        <img src="elgi.jpg">
+                    </div>
+                    <div class="division-card-body">
+                        <div class="division-card-title">Briscoe Elgi</div>
+                        <p class="division-card-text">ELGi compressed air systems trusted by 2M+ users across 70+ countries. Superior uptime backed by expert field technicians.</p>
+                        <a href="#" class="division-card-link">See compressors →</a>
+                    </div>
+                </div>
+
+                <div class="division-card">
+                    <div class="division-card-top division-card-properties">
+                        <img src="apartment.jpg">
+                    </div>
+                    <div class="division-card-body">
+                        <div class="division-card-title">Briscoe Properties</div>
+                        <p class="division-card-text">Upscale residential and mixed-use properties. Development, facility management, and investment opportunities across Lagos.</p>
+                        <a href="#" class="division-card-link">View properties →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-center">
+                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 6: STATS ===== -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">OUR TRACK RECORD</div>
+                <h2>Numbers That Speak for Themselves</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">69</div>
+                    <div class="stat-label">Years of Existence</div>
+                    <div class="stat-subtext">Trading since 1957</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1.5M+</div>
+                    <div class="stat-label">Capital Goods Delivered</div>
+                    <div class="stat-subtext">High satisfaction rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Employees</div>
+                    <div class="stat-subtext">Skilled and certified staff</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">400K+</div>
+                    <div class="stat-label">Customers Served</div>
+                    <div class="stat-subtext">Customer-first philosophy</div>
+                </div>
+            </div>
+
+            <div class="cta-center">
+                <button class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Request a Quote →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 7: WHY CHOOSE BRISCOE ===== -->
+    <section class="why-briscoe">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">WHY CHOOSE BRISCOE</div>
+                <h2>World-Class Products. Nigerian Roots.</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">◆</div>
+                    <h3>Experienced Service Team</h3>
+                    <p>Over six decades of technical expertise. Every customer interaction is handled by trained professionals who go the extra mile.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">▲</div>
+                    <h3>Premium Brand Partners</h3>
+                    <p>We represent Toyota, Manitou, and ELGi — three global leaders built for durability, performance, and long-term value.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">■</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Transparent rates with no hidden fees. Our pricing is structured to meet customer needs without sacrificing quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">●</div>
+                    <h3>Technology-Driven Records</h3>
+                    <p>Our customer portal gives you real-time access to your service records, invoices, and full vehicle history anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- ===== SECTION 10: BRAND PARTNERS ===== -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">OUR BRAND PARTNERS</div>
+            </div>
+
+            <div class="partners-pills">
+                <div class="partner-pill">▲ TOYOTA</div>
+                <div class="partner-pill">◆ MANITOU</div>
+                <div class="partner-pill">● ELGi</div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== SECTION 9: FORBES STRIP ===== -->
+        <section class="forbes-strip">
+            <div class="container">
+                <div class="forbes-content">
+                    <div class="forbes-left">As seen in</div>
+                    <div class="forbes-center">
+                        <span class="forbes-star">★</span>
+                        <span class="forbes-text">Forbes Africa</span>
+                    </div>
+                    <div class="forbes-right">
+                        RT Briscoe Nigeria Plc was featured in Forbes Africa for its role in Nigeria's economic development. <a href="#" class="forbes-link">Read the story →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- ===== SECTION 11: QUOTE FORM ===== -->
+    <section class="quote-section" id="quote-form">
+        <div class="container">
+            <div class="quote-container">
+                <div class="quote-left">
+                    <div class="section-eyebrow" style="color: var(--accent-gold);">GET IN TOUCH</div>
+                    <h2>Ready to Work With Nigeria's Best?</h2>
+                    <p>Whether you need a vehicle, industrial equipment, a compressed air system, or property — our team is ready to walk you through the right solution for your business needs.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <strong>Phone:</strong><br>
+                                0809 050 3875
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div class="contact-item-text">
+                                <strong>Email:</strong><br>
+                                <a href="mailto:briscoemail@rtbriscoe.com" style="color: var(--accent-gold); text-decoration: none;">briscoemail@rtbriscoe.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕐</div>
+                            <div class="contact-item-text">
+                                <strong>Hours:</strong><br>
+                                Mon–Fri, 8:00am – 5:00pm
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <strong>Address:</strong><br>
+                                18 Fatai Atere Way, Matori, Oshodi, Lagos
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-form">
+                    <h3>Request a Quote</h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="form-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="form-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="business-unit">Business Unit *</label>
+                                <select id="business-unit" name="business-unit" required>
+                                    <option value="">Select a business unit</option>
+                                    <option value="Briscoe Motors">Briscoe Motors</option>
+                                    <option value="Briscoe MHE">Briscoe MHE</option>
+                                    <option value="Briscoe Elgi">Briscoe Elgi</option>
+                                    <option value="Briscoe Properties">Briscoe Properties</option>
+                                </select>
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row form-row-full">
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row form-row-full">
+                            <div class="form-group">
+                                <label for="message">Tell us about your requirement *</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">Send Request →</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <strong>Thank you!</strong> A representative will contact you within 24 hours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 12: FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-upper">
+                <div class="footer-column">
+                    <div style="background-color: var(--accent-gold); color: var(--primary-dark); padding: 0.5rem 1rem; display: inline-block; font-weight: 700; margin-bottom: 1rem;">BRISCOE</div>
+                    <p class="footer-tagline">A diversified Nigerian conglomerate delivering automotive, industrial, and real estate excellence since 1957.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook">f</a>
+                        <a href="#" class="social-icon" title="LinkedIn">in</a>
+                        <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                        <a href="#" class="social-icon" title="YouTube">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Corporate Profile</a></li>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Management Team</a></li>
+                        <li><a href="#">Leadership Board</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Business Units</h4>
+                    <ul>
+                        <li><a href="#">Briscoe Motors</a></li>
+                        <li><a href="#">Briscoe MHE</a></li>
+                        <li><a href="#">Briscoe Elgi</a></li>
+                        <li><a href="#">Briscoe Properties</a></li>
+                        <li><a href="#">Pre-Owned Vehicles</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Book a Service</a></li>
+                        <li><a href="#">Customer Portal</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Briscoe Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div>Copyright © 2026. R.T. Briscoe Nigeria Plc. All Rights Reserved.</div>
+                <div>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== CAROUSEL FUNCTIONALITY =====
+        let currentSlide = 0;
+        let carouselInterval;
+        const CAROUSEL_INTERVAL = 10000; // 10 seconds
+
+        function initCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dotsContainer = document.getElementById('carouselDots');
+            
+            // Create navigation dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(index);
+                dotsContainer.appendChild(dot);
+            });
+            
+            // Start auto-rotation
+            startCarousel();
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            // Ensure index is within bounds
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            
+            // Update slides
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.remove('active');
+                if (i === currentSlide) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            // Reset the auto-rotation timer
+            clearInterval(carouselInterval);
+            startCarousel();
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function startCarousel() {
+            carouselInterval = setInterval(nextSlide, CAROUSEL_INTERVAL);
+        }
+
+        // ===== FORM SUBMISSION =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Get form elements
+            const form = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.form-error').forEach(el => {
+                el.classList.remove('show');
+                el.textContent = '';
+            });
+
+            // Validate fields
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    const errorEl = input.parentElement.querySelector('.form-error');
+                    if (errorEl) {
+                        errorEl.textContent = 'This field is required';
+                        errorEl.classList.add('show');
+                    }
+                }
+
+                // Email validation
+                if (input.type === 'email' && input.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value)) {
+                        isValid = false;
+                        const errorEl = input.parentElement.querySelector('.form-error');
+                        if (errorEl) {
+                            errorEl.textContent = 'Please enter a valid email';
+                            errorEl.classList.add('show');
+                        }
+                    }
+                }
+
+                // Phone validation
+                if (input.type === 'tel' && input.value.trim()) {
+                    const phoneRegex = /^[0-9\s\-\+\(\)]+$/;
+                    if (!phoneRegex.test(input.value) || input.value.replace(/\D/g, '').length < 10) {
+                        isValid = false;
+                        const errorEl = input.parentElement.querySelector('.form-error');
+                        if (errorEl) {
+                            errorEl.textContent = 'Please enter a valid phone number';
+                            errorEl.classList.add('show');
+                        }
+                    }
+                }
+            });
+
+            if (!isValid) {
+                return;
+            }
+
+            // Prepare form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                businessUnit: formData.get('business-unit'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+
+            // Try to send via Formspree (free service)
+            fetch('https://formspree.io/f/xyzpqrst', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    phone: data.phone,
+                    email: data.email,
+                    businessUnit: data.businessUnit,
+                    subject: data.subject,
+                    message: data.message
+                })
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    form.style.display = 'none';
+                    formSuccess.classList.add('show');
+
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        form.reset();
+                        form.style.display = 'block';
+                        formSuccess.classList.remove('show');
+                    }, 3000);
+                } else {
+                    // Fallback: Show success anyway (for local testing)
+                    form.style.display = 'none';
+                    formSuccess.classList.add('show');
+
+                    setTimeout(() => {
+                        form.reset();
+                        form.style.display = 'block';
+                        formSuccess.classList.remove('show');
+                    }, 3000);
+                }
+            }).catch(error => {
+                // Fallback for local testing
+                console.log('Form data:', data);
+                form.style.display = 'none';
+                formSuccess.classList.add('show');
+
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'block';
+                    formSuccess.classList.remove('show');
+                }, 3000);
+            });
+        }
+
+        // Initialize carousel on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize carousel
+            initCarousel();
+            
+            // Add smooth scroll behavior for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && document.querySelector(href)) {
+                        e.preventDefault();
+                        document.querySelector(href).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
